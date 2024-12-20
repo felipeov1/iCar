@@ -16,6 +16,7 @@ import PrivacyPolicy from "./components/Pages/Landing/Pages/Privacy/index.jsx";
 import BackToTopButton from "./components/layout/BackToTopButton";
 import Login from "./components/Pages/Login/index.jsx";
 import CriarConta from "./components/Pages/CriarConta/index.jsx";
+import Icar from "./components/Pages/Plataform/Main/index.jsx";
 
 function App() {
   return (
@@ -70,11 +71,23 @@ function AppContent() {
             </div>
           }
         />
+
+        <Route
+          path="/icar"
+          element={
+            <div>
+              <Icar />
+            </div>
+          }
+        />
       </Routes>
 
-      <Footer />
-      <CookieConsent />
-      <BackToTopButton />
+      {location.pathname != "/icar"  && <Footer />}
+
+      {location.pathname != "/icar"  &&   <CookieConsent />}
+
+      {location.pathname != "/icar"  &&   <BackToTopButton />}
+    
     </div>
   );
 }

@@ -29,7 +29,7 @@ const Navbar = () => {
       >
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
-            {/* Logo */}
+
             <a href="/" className="text-2xl font-bold text-blue-600 ml-4">
               <img
                 src="/src/images/icar-logo-transparent.png"

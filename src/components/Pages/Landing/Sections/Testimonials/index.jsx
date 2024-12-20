@@ -6,7 +6,6 @@ import { FaStar } from "react-icons/fa";
 const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
-
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
@@ -24,7 +23,6 @@ const Testimonials = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row items-center justify-between">
-
           <motion.div
             className="flex-shrink-0 mb-6 lg:mb-0"
             initial={{ opacity: 0, x: -50 }}
@@ -37,7 +35,6 @@ const Testimonials = () => {
               className="rounded-lg w-52 h-52 object-cover"
             />
           </motion.div>
-
 
           <motion.div
             className="flex-1 pl-8"
@@ -59,8 +56,7 @@ const Testimonials = () => {
             <p className="text-gray-500">{testimonials[activeIndex].title}</p>
           </motion.div>
 
-
-          <div className="flex flex-col space-y-2 ml-8">
+          <div className="flex lg:flex-col md:flex-row gap-1  lg:space-y-0 ml-8 items-center justify-center">
             {testimonials.map((_, index) => (
               <button
                 key={index}
